@@ -461,7 +461,7 @@
         // ==========================================
         // KONFIGURASI PENGIRIMAN DATA (GOOGLE SCRIPT)
         // ==========================================
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzPe4VBE7ToyDVVhDG9azzp_ukDTFBfnVJHAGHivHKx_LkK0T5OKf3i3sfsgVJeVq8c/exec'; // GANTI DENGAN URL WEB APP GOOGLE SCRIPT ANDA
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzPe4VBE7ToyDVVhDG9azzp_ukDTFBfnVJHAGHivHKx_LkK0T5OKf3i3sfsgVJeVq8c/exec'; //
 
         async function handleRSVP(e) {
             e.preventDefault();
@@ -485,10 +485,16 @@
                     formData.set('jumlahOrang', '0');
                 }
 
+                // Ubah format data menjadi URLSearchParams agar dijamin terbaca oleh Google Apps Script
+                const data = new URLSearchParams();
+                for (const pair of formData) {
+                    data.append(pair[0], pair[1]);
+                }
+
                 // Kirim data ke Google Apps Script tanpa CORS preflight
                 const response = await fetch(scriptURL, { 
                     method: 'POST', 
-                    body: formData,
+                    body: data,
                     mode: 'no-cors' // Mode ini mencegah error block CORS dari browser ke webapp google
                 });
                 
