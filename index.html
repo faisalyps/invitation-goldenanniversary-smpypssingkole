@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP Invitation - 50th Golden Anniversary SMP YPS Singkole</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Tailwind Config for Custom Colors/Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        script: ['Caveat', 'cursive'],
+                    },
+                    colors: {
+                        yps: {
+                            green: '#049229', // Forest Green (Primary)
+                            dark: '#037120',  // Darker shade
+                            gold: '#ffd700',  // Gold (Secondary)
+                            lightgold: '#ffeb85', // Tint
+                            pumpkin: '#FF6700' // Pumpkin (Accent)
+                        }
+                    },
+                    backgroundImage: {
+                        'pattern-light': "url('data:image/svg+xml,%3Csvg width=\\'20\\' height=\\'20\\' viewBox=\\'0 0 20 20\\' xmlns=\\'http://www.w3.org/2000/svg\\'%3E%3Cg fill=\\'%23049229\\' fill-opacity=\\'0.05\\' fill-rule=\\'evenodd\\'%3E%3Ccircle cx=\\'3\\' cy=\\'3\\' r=\\'3\\'/%3E%3Ccircle cx=\\'13\\' cy=\\'13\\' r=\\'3\\'/%3E%3C/g%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        /* Modal transitions */
+        .modal-active { display: flex !important; opacity: 1; pointer-events: auto; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-slate-50 antialiased selection:bg-yps-gold selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-end items-center h-20">
+                <div class="hidden md:flex items-center justify-end space-x-8 w-full">
+                    <a href="#beranda" class="text-sm font-semibold hover:text-yps-green transition">Beranda</a>
+                    <a href="#acara" class="text-sm font-semibold hover:text-yps-green transition">Rangkaian Acara</a>
+                    <a href="#rsvp" class="bg-yps-green text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-yps-dark transition shadow-lg shadow-yps-green/30">RSVP VIP</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-white bg-pattern-light">
+        <!-- Decorative blobs -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-yps-green/10 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-yps-gold/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-float" style="animation-delay: 2s;"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- VIP Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yps-lightgold/50 border border-yps-gold/50 text-yps-dark font-bold text-sm mb-8">
+                <i class="ph-fill ph-star text-yps-pumpkin"></i>
+                UNDANGAN VIP EKSKLUSIF
+                <i class="ph-fill ph-star text-yps-pumpkin"></i>
+            </div>
+            
+            <h2 class="font-script text-yps-gold text-5xl md:text-7xl mb-0 transform -rotate-2">Perayaan</h2>
+            <h1 class="font-sans font-black text-5xl md:text-7xl lg:text-8xl text-yps-green leading-tight mb-2 tracking-tighter drop-shadow-sm">
+                GOLDEN <br/> ANNIVERSARY <span class="text-yps-gold text-6xl md:text-8xl lg:text-9xl align-middle inline-block transform -translate-y-2 drop-shadow-md">50<sup class="text-3xl md:text-5xl top-[-1em]">th</sup></span>
+            </h1>
+            <p class="text-2xl md:text-3xl text-yps-pumpkin font-bold mb-10 max-w-2xl mx-auto tracking-wide">
+                SMP YPS SINGKOLE / SIS
+            </p>
+
+            <div class="bg-white/80 backdrop-blur border border-white/50 shadow-xl rounded-2xl p-6 md:p-8 inline-block max-w-3xl mx-auto mb-12">
+                <p class="font-sans font-bold italic text-xl md:text-2xl text-yps-dark mb-4">
+                    "50 Tahun Menginspirasi, Bersama Dalam Harmoni"
+                </p>
+                <div class="w-24 h-1 bg-gradient-to-r from-yps-green via-yps-gold to-yps-pumpkin mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Date & Location Banner -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 mt-4">
+                <div class="flex items-center gap-3 bg-yps-green text-white px-6 py-4 rounded-xl shadow-lg w-full md:w-auto">
+                    <i class="ph ph-calendar-blank text-3xl text-yps-lightgold"></i>
+                    <div class="text-left">
+                        <p class="text-xs uppercase tracking-wider text-yps-lightgold">Tanggal Pelaksanaan</p>
+                        <p class="font-bold text-lg">18-19 April 2026</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 bg-white text-yps-dark border border-gray-100 shadow-lg px-6 py-4 rounded-xl w-full md:w-auto">
+                    <i class="ph-fill ph-map-pin text-3xl text-yps-gold"></i>
+                    <div class="text-left">
+                        <p class="text-xs uppercase tracking-wider text-gray-500">Lokasi Utama</p>
+                        <p class="font-bold text-lg">SMP YPS Singkole</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <a href="#countdown" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce text-yps-green hover:text-yps-dark transition">
+            <span class="text-xs font-medium uppercase tracking-widest mb-2">Gulir ke Bawah</span>
+            <i class="ph ph-arrow-down text-2xl"></i>
+        </a>
+    </section>
+
+    <!-- Countdown Section -->
+    <section id="countdown" class="py-16 bg-yps-green text-white relative">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h3 class="text-sm font-bold uppercase tracking-widest text-yps-lightgold mb-8">Menuju Puncak Acara</h3>
+            <div class="flex justify-center gap-4 md:gap-8" id="timer">
+                <div class="flex flex-col items-center">
+                    <div class="bg-white/10 backdrop-blur rounded-2xl w-20 h-20 md:w-28 md:h-28 flex items-center justify-center mb-2 border border-white/20">
+                        <span id="days" class="text-3xl md:text-5xl font-sans font-bold">00</span>
+                    </div>
+                    <span class="text-xs md:text-sm font-semibold uppercase tracking-wider">Hari</span>
+                </div>
+                <div class="text-3xl md:text-5xl font-sans font-bold py-4 md:py-6 text-yps-lightgold">:</div>
+                <div class="flex flex-col items-center">
+                    <div class="bg-white/10 backdrop-blur rounded-2xl w-20 h-20 md:w-28 md:h-28 flex items-center justify-center mb-2 border border-white/20">
+                        <span id="hours" class="text-3xl md:text-5xl font-sans font-bold">00</span>
+                    </div>
+                    <span class="text-xs md:text-sm font-semibold uppercase tracking-wider">Jam</span>
+                </div>
+                <div class="text-3xl md:text-5xl font-sans font-bold py-4 md:py-6 text-yps-lightgold hidden sm:block">:</div>
+                <div class="flex flex-col items-center hidden sm:flex">
+                    <div class="bg-white/10 backdrop-blur rounded-2xl w-20 h-20 md:w-28 md:h-28 flex items-center justify-center mb-2 border border-white/20">
+                        <span id="minutes" class="text-3xl md:text-5xl font-sans font-bold">00</span>
+                    </div>
+                    <span class="text-xs md:text-sm font-semibold uppercase tracking-wider">Menit</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rundown Section -->
+    <section id="acara" class="py-24 bg-pattern-light">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-yps-pumpkin font-bold uppercase tracking-widest text-sm">Agenda Eksklusif</span>
+                <h2 class="font-sans text-4xl md:text-5xl font-extrabold text-yps-green mt-2">Rundown Acara</h2>
+                <div class="w-20 h-1 bg-yps-gold mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Day 1 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl shadow-gray-200/50 border-t-8 border-yps-green relative overflow-hidden group hover:-translate-y-1 transition duration-300">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 text-yps-green group-hover:scale-110 transition duration-500">
+                        <i class="ph-fill ph-calendar-star text-9xl"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 bg-green-50 text-yps-dark px-4 py-2 rounded-full font-bold mb-6">
+                            <i class="ph-fill ph-calendar-check"></i>
+                            Sabtu, 18 April 2026
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <!-- Timeline item -->
+                            <div class="flex gap-4">
+                                <div class="w-20 text-right font-bold text-yps-green shrink-0">06.30</div>
+                                <div class="w-px bg-gray-200 relative">
+                                    <div class="absolute top-1 -left-1 w-2.5 h-2.5 bg-yps-gold rounded-full ring-4 ring-white"></div>
+                                </div>
+                                <div class="pb-6">
+                                    <h4 class="font-bold text-gray-800 text-lg">Fun Walk</h4>
+                                    <p class="text-gray-500 text-sm mt-1">Sesi jalan santai pembuka acara.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-20 text-right font-bold text-yps-green shrink-0">10.00</div>
+                                <div class="w-px bg-gray-200 relative">
+                                    <div class="absolute top-1 -left-1 w-2.5 h-2.5 bg-yps-gold rounded-full ring-4 ring-white"></div>
+                                </div>
+                                <div class="pb-6">
+                                    <h4 class="font-bold text-gray-800 text-lg">Pembagian Door Prize</h4>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-20 text-right font-bold text-yps-green shrink-0">10.30</div>
+                                <div class="w-px bg-gray-200 relative">
+                                    <div class="absolute top-1 -left-1 w-2.5 h-2.5 bg-yps-gold rounded-full ring-4 ring-white"></div>
+                                </div>
+                                <div class="pb-6">
+                                    <h4 class="font-bold text-gray-800 text-lg">Penampilan Kesenian</h4>
+                                    <p class="text-gray-500 text-sm mt-1">Persembahan seni dari siswa dan alumni.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-20 text-right font-bold text-yps-green shrink-0">14.00</div>
+                                <div class="w-px bg-gray-200 relative">
+                                    <div class="absolute top-1 -left-1 w-2.5 h-2.5 bg-yps-gold rounded-full ring-4 ring-white"></div>
+                                </div>
+                                <div class="pb-6">
+                                    <h4 class="font-bold text-gray-800 text-lg">Coaching Clinic</h4>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-20 text-right font-bold text-yps-green shrink-0">17.00</div>
+                                <div class="w-px bg-transparent relative"> <!-- Last item transparent border -->
+                                    <div class="absolute top-1 -left-1 w-2.5 h-2.5 bg-yps-green rounded-full ring-4 ring-white"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 text-lg">Gala Dinner & Ramah Tamah</h4>
+                                    <p class="text-gray-500 text-sm mt-1">Makan malam eksklusif bersama tamu kehormatan.</p>
+                                    <span class="inline-block mt-2 text-xs font-semibold bg-yps-lightgold text-yps-dark px-2 py-1 rounded">Sesi Utama VIP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="bg-white rounded-3xl p-8 shadow-xl shadow-gray-200/50 border-t-8 border-yps-gold relative overflow-hidden group hover:-translate-y-1 transition duration-300">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 text-yps-gold group-hover:scale-110 transition duration-500">
+                        <i class="ph-fill ph-jeep text-9xl"></i>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="inline-flex items-center gap-2 bg-yellow-50 text-yellow-800 px-4 py-2 rounded-full font-bold mb-6">
+                            <i class="ph-fill ph-calendar-check"></i>
+                            Minggu, 19 April 2026
+                        </div>
+                        
+                        <div class="space-y-6">
+                            <div class="bg-gray-50 p-4 rounded-xl mb-4 border border-gray-100">
+                                <p class="text-sm text-gray-600 mb-2"><i class="ph-fill ph-info text-yps-gold"></i> Sesi Tour (Opsional) dilaksanakan secara paralel pada pukul 08.00 - 11.00.</p>
+                            </div>
+                            <!-- Timeline item -->
+                            <div class="flex gap-4">
+                                <div class="w-20 text-right font-bold text-yps-green shrink-0">08.00</div>
+                                <div class="w-px bg-gray-200 relative">
+                                    <div class="absolute top-1 -left-1 w-2.5 h-2.5 bg-yps-gold rounded-full ring-4 ring-white"></div>
+                                </div>
+                                <div class="pb-6">
+                                    <h4 class="font-bold text-gray-800 text-lg">Tour Pabrik-Mining (Solia)</h4>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-20 text-right font-bold text-yps-green shrink-0">08.00</div>
+                                <div class="w-px bg-gray-200 relative">
+                                    <div class="absolute top-1 -left-1 w-2.5 h-2.5 bg-yps-gold rounded-full ring-4 ring-white"></div>
+                                </div>
+                                <div class="pb-6">
+                                    <h4 class="font-bold text-gray-800 text-lg">Tour Balambano</h4>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-20 text-right font-bold text-yps-green shrink-0">08.00</div>
+                                <div class="w-px bg-gray-200 relative">
+                                    <div class="absolute top-1 -left-1 w-2.5 h-2.5 bg-yps-gold rounded-full ring-4 ring-white"></div>
+                                </div>
+                                <div class="pb-6">
+                                    <h4 class="font-bold text-gray-800 text-lg">Tour Danau Matano</h4>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-20 text-right font-bold text-yps-green shrink-0">11.00</div>
+                                <div class="w-px bg-transparent relative">
+                                    <div class="absolute top-1 -left-1 w-2.5 h-2.5 bg-yps-green rounded-full ring-4 ring-white"></div>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 text-lg">Lunch dan Penutupan</h4>
+                                    <p class="text-gray-500 text-sm mt-1">Makan siang bersama sekaligus penutupan acara perayaan 50 Tahun.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP VIP Form Section -->
+    <section id="rsvp" class="py-24 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-900 rounded-3xl overflow-hidden shadow-2xl relative">
+                <!-- Decorative background in card -->
+                <div class="absolute top-0 right-0 w-64 h-64 bg-yps-green/20 rounded-full blur-3xl -mr-10 -mt-10"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-yps-gold/20 rounded-full blur-3xl -ml-10 -mb-10"></div>
+                
+                <div class="relative z-10 p-8 md:p-12">
+                    <div class="text-center mb-10">
+                        <i class="ph-fill ph-envelope-open text-5xl text-yps-gold mb-4"></i>
+                        <h2 class="font-sans text-3xl md:text-4xl font-bold text-white mb-2">Konfirmasi Kehadiran VIP</h2>
+                        <p class="text-gray-400 text-sm md:text-base font-medium">Merupakan suatu kehormatan bagi kami atas kehadiran Bapak/Ibu pada perayaan Golden Anniversary ini.</p>
+                    </div>
+
+                    <form id="rsvpForm" class="space-y-6 max-w-2xl mx-auto" onsubmit="handleRSVP(event)">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Nama -->
+                            <div class="space-y-2">
+                                <label for="nama" class="block text-sm font-medium text-gray-300">Nama Lengkap beserta Gelar <span class="text-red-400">*</span></label>
+                                <input type="text" id="nama" required class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yps-green focus:border-transparent transition" placeholder="Contoh: Dr. Budi Santoso, M.Si">
+                            </div>
+                            
+                            <!-- Instansi -->
+                            <div class="space-y-2">
+                                <label for="instansi" class="block text-sm font-medium text-gray-300">Jabatan / Instansi <span class="text-red-400">*</span></label>
+                                <input type="text" id="instansi" required class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yps-green focus:border-transparent transition" placeholder="Contoh: Direktur Utama PT Maju">
+                            </div>
+                        </div>
+
+                        <!-- Status Kehadiran -->
+                        <div class="space-y-3 pt-2">
+                            <label class="block text-sm font-medium text-gray-300">Apakah Anda akan hadir? <span class="text-red-400">*</span></label>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <label class="flex-1 cursor-pointer">
+                                    <input type="radio" name="kehadiran" value="hadir" class="peer sr-only" required onchange="toggleGuestCount(true)">
+                                    <div class="rounded-xl border border-slate-700 bg-slate-800 p-4 hover:bg-slate-700 peer-checked:border-yps-green peer-checked:bg-yps-green/10 peer-checked:ring-1 peer-checked:ring-yps-green transition text-center flex items-center justify-center gap-2">
+                                        <div class="w-4 h-4 rounded-full border-2 border-gray-400 peer-checked:border-yps-green flex items-center justify-center">
+                                            <div class="w-2 h-2 rounded-full bg-yps-green scale-0 transition-transform"></div>
+                                        </div>
+                                        <span class="text-white font-medium">Ya, Saya akan hadir</span>
+                                    </div>
+                                </label>
+                                <label class="flex-1 cursor-pointer">
+                                    <input type="radio" name="kehadiran" value="tidak_hadir" class="peer sr-only" required onchange="toggleGuestCount(false)">
+                                    <div class="rounded-xl border border-slate-700 bg-slate-800 p-4 hover:bg-slate-700 peer-checked:border-red-500 peer-checked:bg-red-500/10 peer-checked:ring-1 peer-checked:ring-red-500 transition text-center flex items-center justify-center gap-2">
+                                        <div class="w-4 h-4 rounded-full border-2 border-gray-400 peer-checked:border-red-500 flex items-center justify-center">
+                                            <div class="w-2 h-2 rounded-full bg-red-500 scale-0 transition-transform"></div>
+                                        </div>
+                                        <span class="text-white font-medium">Maaf, tidak bisa hadir</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Jumlah Orang (Hidden by default, shown if attending) -->
+                        <div id="guestCountWrapper" class="space-y-2 hidden opacity-0 transition-opacity duration-300">
+                            <label for="jumlahOrang" class="block text-sm font-medium text-gray-300">Jumlah Orang yang Hadir (Termasuk Anda)</label>
+                            <select id="jumlahOrang" class="w-full bg-slate-800 border border-slate-700 text-white rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yps-green focus:border-transparent appearance-none">
+                                <option value="1">1 Orang</option>
+                                <option value="2">2 Orang (Beserta Pasangan)</option>
+                            </select>
+                        </div>
+
+                        <div class="pt-6">
+                            <button type="submit" class="w-full bg-yps-green hover:bg-yps-dark text-white font-bold text-lg py-4 rounded-xl shadow-lg shadow-yps-green/30 transform hover:-translate-y-1 transition duration-200 flex justify-center items-center gap-2">
+                                <span>Kirim Konfirmasi</span>
+                                <i class="ph-bold ph-paper-plane-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-yps-dark py-12 border-t-4 border-yps-gold">
+        <div class="max-w-6xl mx-auto px-4 text-center text-white/80">
+            <div class="flex justify-center items-center gap-4 mb-6">
+                <a href="https://smp.yps.sch.id/" target="_blank" class="hover:text-white transition"><i class="ph ph-globe text-2xl"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="ph ph-instagram-logo text-2xl"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="ph ph-facebook-logo text-2xl"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="ph ph-youtube-logo text-2xl"></i></a>
+            </div>
+            <p class="font-sans font-bold italic text-yps-lightgold mb-4 text-lg">"50 Tahun Menginspirasi, Bersama Dalam Harmoni"</p>
+            <p class="text-sm">© 2026 SMP YPS Singkole / SIS. All rights reserved.</p>
+            <p class="text-xs mt-2 text-white/50">VIP Invitation System.</p>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 z-[100] bg-slate-900/80 backdrop-blur-sm hidden items-center justify-center opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-3xl p-8 max-w-sm w-full mx-4 text-center shadow-2xl transform scale-95 transition-transform duration-300" id="modalContent">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="ph-fill ph-check-circle text-5xl text-yps-green"></i>
+            </div>
+            <h3 class="font-sans text-2xl font-extrabold text-yps-dark mb-2">Terima Kasih!</h3>
+            <p class="text-gray-600 mb-8 font-medium">Konfirmasi kehadiran Bapak/Ibu telah kami terima. Kami menantikan kehadiran Anda di acara Golden Anniversary.</p>
+            <button onclick="closeModal()" class="bg-yps-green text-white font-bold py-3 px-8 rounded-full hover:bg-yps-dark transition w-full">
+                Tutup
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Navbar Scrolled State
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.replace('bg-white/90', 'bg-white/95');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.replace('bg-white/95', 'bg-white/90');
+            }
+        });
+
+        // Set Target Date (April 18, 2026 06:30:00)
+        const targetDate = new Date('April 18, 2026 06:30:00').getTime();
+
+        // Update Countdown Timer
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+        }, 1000);
+
+        // Form logic
+        function toggleGuestCount(isAttending) {
+            const wrapper = document.getElementById('guestCountWrapper');
+            // Adding a little CSS magic for radio buttons internal dot
+            const radioDots = document.querySelectorAll('.peer-checked\\:border-yps-green .bg-yps-green, .peer-checked\\:border-red-500 .bg-red-500');
+            
+            document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                const dot = radio.nextElementSibling.querySelector('div > div');
+                if (radio.checked) {
+                    dot.classList.replace('scale-0', 'scale-100');
+                } else {
+                    dot.classList.replace('scale-100', 'scale-0');
+                }
+            });
+
+            if (isAttending) {
+                wrapper.classList.remove('hidden');
+                setTimeout(() => wrapper.classList.replace('opacity-0', 'opacity-100'), 50);
+            } else {
+                wrapper.classList.replace('opacity-100', 'opacity-0');
+                setTimeout(() => wrapper.classList.add('hidden'), 300);
+            }
+        }
+
+        // Handle Form Submit
+        function handleRSVP(e) {
+            e.preventDefault();
+            
+            // In a real app, you would send data to a backend here.
+            // const formData = {
+            //     nama: document.getElementById('nama').value,
+            //     instansi: document.getElementById('instansi').value,
+            //     kehadiran: document.querySelector('input[name="kehadiran"]:checked').value,
+            //     jumlah: document.getElementById('jumlahOrang').value
+            // };
+            // console.log(formData);
+
+            // Show Modal
+            const modal = document.getElementById('successModal');
+            const content = document.getElementById('modalContent');
+            
+            modal.classList.add('modal-active');
+            setTimeout(() => {
+                content.classList.replace('scale-95', 'scale-100');
+            }, 50);
+
+            // Reset Form
+            document.getElementById('rsvpForm').reset();
+            toggleGuestCount(false);
+            
+            // Reset radio dots manually
+            document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                const dot = radio.nextElementSibling.querySelector('div > div');
+                dot.classList.replace('scale-100', 'scale-0');
+            });
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('successModal');
+            const content = document.getElementById('modalContent');
+            
+            content.classList.replace('scale-100', 'scale-95');
+            modal.classList.remove('modal-active');
+        }
+    </script>
+</body>
+</html>
